@@ -1,0 +1,32 @@
+import React, { PureComponent } from "react";
+import Person from "./Person/Person";
+
+
+class Persons extends PureComponent {
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (
+  //     nextProps.Persons !== this.props.persons ||
+  //     nextProps.changed !== this.props.changed ||
+  //     nextProps.clicked !== this.props.clicked
+  //   ) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+
+  render() {
+    return this.props.persons.map((person, index) => {
+      return (
+        <Person
+          click={() => this.props.clicked(index)}
+          name={person.name}
+          age={person.age}
+          key={person.id}
+          changed={(event) => this.props.changed(event, person.id)}
+        />
+      );
+    });
+  }
+}
+
+export default Persons;
