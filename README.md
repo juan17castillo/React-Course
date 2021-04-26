@@ -2,7 +2,7 @@
 
 
 
-📦 In this repository I will save all my dummy projects of the course that I am doing in react. It's just in case I change my development environment between Pop Os! and Windows.
+📦 In this repository I will save all my dummy projects of the course that I am doing in React. It's just in case I change my development environment between Pop Os! and Windows.
 
 ## Installation
 
