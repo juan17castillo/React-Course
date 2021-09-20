@@ -1,12 +1,20 @@
+import { useState } from "react";
 import "./App.css";
-import Greeting from "./components/Greeting";
 
-function App() {
+const App = () => {
+  const [buttonColor, setButtonColor] = useState("red");
+  const newButtonColor = buttonColor === "red" ? "blue" : "red";
+
   return (
     <div className="App">
-      <Greeting />
+      <button
+        style={{ backgroundColor: buttonColor }}
+        onClick={() => setButtonColor(newButtonColor)}
+      >
+        Change to {newButtonColor}
+      </button>
     </div>
   );
-}
+};
 
 export default App;
